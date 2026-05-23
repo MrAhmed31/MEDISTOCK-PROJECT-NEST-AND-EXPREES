@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/MrAhmed31/MEDISTOCK-PROJECT-NEST-AND-EXPREES'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t pharmacy-express .'
